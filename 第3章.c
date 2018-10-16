@@ -13,7 +13,7 @@ void p20() {
 	if(x == 0) {
 		printf("Yes\n");
 		return;
-	}
+	}/*
 	while(x != 0) {
 		int last = x % 10;
 		left[len] = last;
@@ -21,6 +21,16 @@ void p20() {
 		x = x / 10;
 		//left[len++] = x % 10;
 		//x /= 10;
+	}*/
+	int b = 0;
+	int save = x;
+	while(x != 0) {
+		b = b * 10 + x %10;
+		x /= 10;
+	}
+	if(b == save) {
+		printf("Yes\n");
+		return;
 	}
 	//bool flag = true;
 	int flag = 1;
